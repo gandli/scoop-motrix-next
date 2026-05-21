@@ -14,10 +14,14 @@
     }
   },
   "installer": {
-    "script": "Start-Process $fname -ArgumentList '/S', \"/D=$dir\" -Wait -NoNewWindow"
+    "script": "$exe = Get-ChildItem \"$dir\" -Filter \"MotrixNext_*_setup.exe\" | Select-Object -First 1; Start-Process $exe.FullName -ArgumentList '/S', \"/D=$dir\" -Wait -NoNewWindow"
   },
   "uninstaller": {
     "script": "Start-Process \"$dir\\unins000.exe\" -ArgumentList '/SILENT' -Wait -NoNewWindow"
+  },
+  "uninstaller": {
+    "file": "unins000.exe",
+    "args": ["/SILENT"]
   },
   "shortcuts": [
     [
