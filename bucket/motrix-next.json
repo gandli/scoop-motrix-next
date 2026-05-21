@@ -6,11 +6,11 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.8.10/MotrixNext_3.8.10_x64-setup.exe",
-      "hash": "c64b514764163be87f20b6f914b596c12d6a63bb9991cbb89a3a75b568447b50"
+      "hash": "cd9b3812aa983242ee3ced9f179d71a26ed29803c24dc07f763b4bcb1b11bbb9"
     },
     "arm64": {
       "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.8.10/MotrixNext_3.8.10_arm64-setup.exe",
-      "hash": "79d75ece7a3e0b5851ebd65f9601e76c2c8aa90007ee1795ea5b69e66d7b1a36"
+      "hash": "78da2a44ef8ccad097b77359baea1c761639e88bae051a5c4fcef43b1bf8722b"
     }
   },
   "installer": {
