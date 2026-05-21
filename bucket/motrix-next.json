@@ -14,7 +14,7 @@
     }
   },
   "installer": {
-    "script": "$exe = Get-ChildItem \"$dir\" -Filter \"MotrixNext_*_setup.exe\" | Select-Object -First 1; Start-Process $exe.FullName -ArgumentList '/S', \"/D=$dir\" -Wait -NoNewWindow"
+    "script": "Write-Host \"DIR: $dir\"; Get-ChildItem $dir | ForEach-Object { Write-Host $_.Name }; Start-Process \"$dir\\MotrixNext_3.8.10_x64-setup.exe\" -ArgumentList '/S', \"/D=$dir\" -Wait -NoNewWindow"
   },
   "uninstaller": {
     "script": "Start-Process \"$dir\\unins000.exe\" -ArgumentList '/SILENT' -Wait -NoNewWindow"
