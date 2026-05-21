@@ -6,20 +6,18 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.8.10/MotrixNext_3.8.10_x64-setup.exe",
-      "hash": "467115A2BB3D156186F9E1B5CF1C37A9A77B3A23564FF46A2431A8BC3297408F"
+      "hash": "c64b514764163be87f20b6f914b596c12d6a63bb9991cbb89a3a75b568447b50"
     },
     "arm64": {
       "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.8.10/MotrixNext_3.8.10_arm64-setup.exe",
-      "hash": "2DAA33F37BF83B2F297258D871BFBC9A067A6CC8FBF02675D845B12D81047A1B"
+      "hash": "79d75ece7a3e0b5851ebd65f9601e76c2c8aa90007ee1795ea5b69e66d7b1a36"
     }
   },
   "installer": {
-    "file": "MotrixNext_3.8.10_x64-setup.exe",
-    "args": ["/S"]
+    "script": "Start-Process $fname -ArgumentList '/S', \"/D=$dir\" -Wait -NoNewWindow"
   },
   "uninstaller": {
-    "file": "unins000.exe",
-    "args": ["/SILENT"]
+    "script": "Start-Process \"$dir\\unins000.exe\" -ArgumentList '/SILENT' -Wait -NoNewWindow"
   },
   "shortcuts": [
     [
