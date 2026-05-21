@@ -1,0 +1,43 @@
+{
+  "version": "3.8.10",
+  "description": "A full-featured download manager — rebuilt from the ground up",
+  "homepage": "https://github.com/AnInsomniacy/motrix-next",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.8.10/MotrixNext_3.8.10_x64-setup.exe",
+      "hash": "467115A2BB3D156186F9E1B5CF1C37A9A77B3A23564FF46A2431A8BC3297408F"
+    },
+    "arm64": {
+      "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.8.10/MotrixNext_3.8.10_arm64-setup.exe",
+      "hash": "2DAA33F37BF83B2F297258D871BFBC9A067A6CC8FBF02675D845B12D81047A1B"
+    }
+  },
+  "installer": {
+    "file": "MotrixNext_3.8.10_x64-setup.exe",
+    "args": ["/S"]
+  },
+  "uninstaller": {
+    "file": "unins000.exe",
+    "args": ["/SILENT"]
+  },
+  "shortcuts": [
+    [
+      "MotrixNext.exe",
+      "Motrix Next"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/AnInsomniacy/motrix-next"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v$version/MotrixNext_${version}_x64-setup.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v$version/MotrixNext_${version}_arm64-setup.exe"
+      }
+    }
+  }
+}
